@@ -1,0 +1,97 @@
+.footer-top {
+    background-color: #191A1C;
+    padding: 20px 0;
+}
+
+.goverment-box {
+    margin: 0 -15px;
+    @include flex($alignI: center, $justify: center);
+
+    .column {
+        width: 25%;
+        padding: 0 40px;
+
+        img {
+            opacity: .2;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.footer-middle {
+    background-color: #17181A;
+    padding: 50px 0;
+
+    .wrapper {
+        text-align: left;
+    }
+
+    .logo {
+        margin-right: 70px;
+        vertical-align: top;
+    }
+
+    .text {
+        display: inline-block;
+        vertical-align: top;
+        width: 630px;
+        color: $light;
+        opacity: .2;
+        line-height: 30px;
+        font-family: $ptr;
+    }
+}
+
+
+
+
+.footer-bottom {
+    background-color: #17181A;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, .05);
+
+    .wrapper {
+        @extend %clearfix;
+    }
+
+    .developer {
+        float: left;
+        opacity: .6;
+        color: #fff;
+        font-size: 14px;
+
+        a {
+            color: $yellow;
+            text-decoration: underline;
+        }
+    }
+
+    .socials {
+        float: right;
+        font-size: 14px;
+
+        a {
+            color: #fff;
+            opacity: .6;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            margin-left: 30px;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

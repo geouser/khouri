@@ -26,3 +26,31 @@ h2 {
 	text-align: center;
     padding: 0 15px;
 }
+
+
+
+// Logo
+.logo {
+    width: 200px;
+    display: inline-block;
+
+    &-text {
+        background-color: $yellow;
+        font-size: 30px;
+        font-family: $rb;
+        line-height: 35px;
+        color: #17181a;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px 0;
+    }
+
+    &-label {
+        font-family: $ptr;
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        margin-top: 13px;
+    }
+}

@@ -1,0 +1,40 @@
+.form {
+    background-color: #17181a;
+    padding: 37px 90px 45px;
+    &__group {
+        @include flex();
+        input {
+            width: 28%;
+        }
+    }
+    input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #6c6d70;
+        line-height: 30px;
+        padding-left: 14px;
+        font-size: 14px;
+        font-family: $ptr;
+        color: $text;
+        &:hover {
+            color: #fff;
+            border-bottom: 1px solid $yellow;
+        }
+    }
+    button {
+        margin-top: 38px;
+    }
+}
+
+input:hover::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    opacity:  1;
+}
+input:hover:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   opacity:  1;
+}
+input:hover::-moz-placeholder { /* Mozilla Firefox 19+ */
+   opacity:  1;
+}
+input:hover:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   opacity:  1;
+}

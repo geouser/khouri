@@ -9,7 +9,9 @@
             background-size: cover;
     @include flex($direction: column, $justify: center);
     .form {
-        margin-top: 80px;
+        width: calc(100% - 140px);
+        display: block;
+        margin: 80px auto 0;
     }
 }
 
@@ -29,7 +31,7 @@
 }
 
 .slick-arrow {
-  background-color: $grey;
+  background-color: #222326;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
   left: 20px;
@@ -56,6 +58,6 @@
   }
   &:hover,
   &:focus {
-      background: $grey;
+      background: #222326;
   }
 }

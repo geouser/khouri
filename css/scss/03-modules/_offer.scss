@@ -1,3 +1,25 @@
 .offer {
-    height: 800px;
+    padding-top: 190px;
+    height: 100%;
+    min-height: 600px;
+    background-image: url("../images/offer_bg.jpg");
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    @include flex($direction: column, $justify: center);
+    .form {
+        margin-top: 80px;
+    }
+}
+
+.siteTitle {
+    font: 100px $pfb;
+    color: #FFF;
+    span {
+        display: block;
+        text-align: center;
+        font: 34px $rl;
+        margin-top: 10px;
+    }
 }

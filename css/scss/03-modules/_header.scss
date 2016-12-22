@@ -1,62 +1,130 @@
          
 .mainHeader {
-    /*@include position(absolute, 0, auto, auto, 0);*/
+    @include position(absolute, 0, auto, auto, 0);
     width: 100%;
     z-index: 100;
-    background: #fff;
     margin: 0;
     @include transition(all, .4s);
-    
+    &__info {
+        height: 50px;
+        color: $text;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        .wrapper {
+            height: 100%;
+            @include flex();
+        }
+    }
+    &__navPanel {
+        @include flex();
+        padding-top: 25px;
+    }
         /*.................media.............*/
         @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
-            width: 260px !important;
-            height: 100%;
-            text-align: center;
-            background-color: #fff;
-            margin-top: 0;
-            padding: 20px 0;
-            z-index: 100;
-            overflow: scroll;
-             
-            &.active { left: 0;}
-            .wrapper {
-                display: block;
-            }
         }
         /*.............end media..............*/
 }
 
+.tel,
+.mail {
+    color: $text;
+    font-size: 14px;line-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tel {
+    margin-right: 25px;
+}
+.mail {
+    padding-left: 25px;
+    border-left: 1px solid rgba(255,255,255,.1);
+}
+
+.logo {
+    h1 {
+        background-color: $yellow;
+        padding: 14px;
+        color: #17181a;
+        position: relative;
+        text-transform: uppercase;
+        width: 200px;
+        font: 30px/35px $rb;
+        span {
+            position: absolute;
+            bottom: -24px;
+            color: #fff;
+            font: 12px $ptr;
+            left: 0;
+            width: 100%;
+            letter-spacing: .3px;
+        }
+    }
+}
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
     ul {
         list-style-type: none;
-        a {
+        li {
             display: inline-block;
-            margin: 0 20px;
-            text-decoration: none;
-            @include transition(all, .2s);             
-            &:hover {}
+            vertical-align: middle;
+            a {
+                color: #FFF;
+                font: 13px/30px $ptb;
+                text-transform: uppercase;
+                color: $text;
+                margin-left: 30px;
+                display: inline-block;
+                border-bottom: 1px solid transparent;
+                &.active,
+                &:hover {
+                    color: #FFF;
+                    border-bottom: 1px solid $yellow;
+                }
+            }
         }
-
+    }
             /*.................media.............*/
             @include m800 { 
-                display: block;
-                position: relative;
-                li a  {   
-                    margin: 0 0 25px 0;
-                    &.active {color: #ECCC1D;}
-                    &:hover  {background: transparent;}
-                } 
             }
             /*.............end media.............*/
-    }
 }
 
 
-
+.social {
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 38px;
+        width: 13px;
+        height: 14px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        -webkit-background-size: 100%;
+             -o-background-size: 100%;
+                background-size: 100%;
+        opacity: .6;
+        &:first-of-type {
+            margin-left: 0;
+        }
+        &--fb {
+            background-image: url("../images/fb.svg");
+            width: 14px 13px;
+            
+        }
+        &--tw {
+            background-image: url("../images/tw.svg");
+            width: 14px 13px;
+        }
+        &--in {
+            background-image: url("../images/in.svg");
+            width: 14px 13px;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
 
 /* ------------------------------------ */
 /*  MENU BUTTON  */

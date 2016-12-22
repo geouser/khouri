@@ -61,3 +61,26 @@
       background: #222326;
   }
 }
+
+.slick-dots {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid $yellow;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    &.slick-active {
+        background-color: #FFF;
+        border: 1px solid #fff;
+    }
+    &:before {
+        display: none;
+    }
+    button {
+      display: none;
+    }
+  }
+}

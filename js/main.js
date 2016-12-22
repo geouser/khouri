@@ -45,8 +45,8 @@ jQuery(document).ready(function($) {
             alternateHeight : true,
             minh: 80,
             alternateHeightRange : {
-                min : $(window).width()/5,
-                max : $(window).width()/3
+                min : $(window).height()/4,
+                max : $(window).height()/2.5
             },
             margin : 0
         });    

@@ -229,7 +229,7 @@ jQuery(document).ready(function($) {
 
 
 
-     var map;
+    var map;
     function googleMap_initialize() {
         var lat = $('#map_canvas').data('lat');
         var long = $('#map_canvas').data('lng');

@@ -43,7 +43,6 @@ jQuery(document).ready(function($) {
             fillLastRow : true,
             liquid: false, 
             alternateHeight : true,
-            minh: 80,
             alternateHeightRange : {
                 min : $(window).height()/4,
                 max : $(window).height()/2.5
@@ -56,6 +55,33 @@ jQuery(document).ready(function($) {
     $(window).on('resize', function(event) {
         event.preventDefault();
         montage();
+    });
+
+    $('.am-container').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        fixedContentPos: false,
+        fixedBgPos: true,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+            verticalFit: true,
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        },
+        gallery: {
+            enabled: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function(element) {
+                return element.find('img');
+            }
+        }
+        
     });
 
 

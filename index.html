@@ -48,12 +48,12 @@
                     </a>
                     <nav class="mainNav"><!-- start navigation -->
                         <ul>
-                            <li><a href="#" class="active">Home</a></li>
-                            <li><a href="#">About company</a></li>
-                            <li><a href="#">Our team</a></li>
-                            <li><a href="#">Our expertise</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#about">About company</a></li>
+                            <li><a href="#team">Our team</a></li>
+                            <li><a href="#expertise">Our expertise</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact us</a></li>
                         </ul>
                     </nav><!-- end nav -->
                 </div>
@@ -70,7 +70,7 @@
 
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
-        <section class="offer">
+        <section class="offer" id="home">
             <div class="offer__slider"><!-- start offer__slider -->
                 <div>
                     <div class="wrapper">
@@ -92,12 +92,16 @@
                     </div>
                 </div>
             </div><!-- end offer__slider -->
+            <div class="scroll-down anchor" href="#about">
+                <img src="images/mouse.svg" alt="">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
         </section><!-- end offer section --> 
 
 
         <!--=================================================================================================-->
                                                     <!-- About SECTION -->
-        <section class="about section">
+        <section class="about section" id="about">
             <div class="wrapper">
                 <h2>About company</h2>
                 <div class="infoBlock">
@@ -124,6 +128,83 @@
                     </div>
                 </div>
             </div>
+        </section><!-- end About section --> 
+
+
+
+        <!--=================================================================================================-->
+                                                    <!-- Team SECTION -->
+        <section class="team section" id="team">
+
+                <h2 class="white">Our team</h2>
+                <div class="team__slider">
+                    <div class="team__slider__slide">
+                        <div class="team__slider__slide__img">
+                            <img src="images/worker.jpg" alt="">
+                        </div>
+                        <div class="team__slider__slide__info">
+                            <p> 
+                                Ibrahim Ali Karam Khouri
+                                <span>Chairman</span>
+                                <span class="team__slider__slide__info__lang">Languages: Arabic, English</span>
+                            </p>
+                            <button href="#modal-popup-worker" class="button magnific">Read more</button>
+                        </div>
+                    </div>
+                    <div class="team__slider__slide">
+                        <div class="team__slider__slide__img">
+                            <img src="images/worker.jpg" alt="">
+                        </div>
+                        <div class="team__slider__slide__info">
+                            <p> 
+                                Ibrahim Ali Karam Khouri
+                                <span>Chairman</span>
+                                <span class="team__slider__slide__info__lang">Languages: Arabic, English</span>
+                            </p>
+                            <button class="button">Read more</button>
+                        </div>
+                    </div>
+                    <div class="team__slider__slide">
+                        <div class="team__slider__slide__img">
+                            <img src="images/worker.jpg" alt="">
+                        </div>
+                        <div class="team__slider__slide__info">
+                            <p> 
+                                Ibrahim Ali Karam Khouri
+                                <span>Chairman</span>
+                                <span class="team__slider__slide__info__lang">Languages: Arabic, English</span>
+                            </p>
+                            <button class="button">Read more</button>
+                        </div>
+                    </div>
+                    <div class="team__slider__slide">
+                        <div class="team__slider__slide__img">
+                            <img src="images/worker.jpg" alt="">
+                        </div>
+                        <div class="team__slider__slide__info">
+                            <p> 
+                                Ibrahim Ali Karam Khouri
+                                <span>Chairman</span>
+                                <span class="team__slider__slide__info__lang">Languages: Arabic, English</span>
+                            </p>
+                            <button class="button">Read more</button>
+                        </div>
+                    </div>
+                    <div class="team__slider__slide">
+                        <div class="team__slider__slide__img">
+                            <img src="images/worker.jpg" alt="">
+                        </div>
+                        <div class="team__slider__slide__info">
+                            <p> 
+                                Ibrahim Ali Karam Khouri
+                                <span>Chairman</span>
+                                <span class="team__slider__slide__info__lang">Languages: Arabic, English</span>
+                            </p>
+                            <button class="button">Read more</button>
+                        </div>
+                    </div>
+                </div><!-- end team slider --> 
+
         </section><!-- end About section --> 
 
 
@@ -200,7 +281,7 @@
         </section>
 
 
-        <section class="section gallery">
+        <section class="section gallery" id="gallery">
             <div class="wrapper">
                 <h2>Gallery</h2>
             </div>
@@ -245,7 +326,7 @@
 
         
         <!-- start map -->
-        <section class="map">
+        <section class="map" id="contact">
             <div class="map-canvas" id="map_canvas" data-lat="25.241309" data-lng="55.272260"></div>
             <h2>Contacts us</h2>
 
@@ -317,7 +398,24 @@
         <!-- end footer -->
 
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog popup"></div>
+        <div id="modal-popup-worker" class="mfp-hide zoom-anim-dialog popup popup--info">
+            <div class="popup__left">
+                <img src="images/worker.jpg" alt="">
+            </div>
+            <div class="popup__right">
+                <div class="aboutWorker">
+                    <p> 
+                        Ibrahim Ali Karam Khouri
+                        <span class="position">Chairman</span>
+                    </p>
+                    <span class="tit">Languages:</span>
+                    <span class="des">Arabic, English</span>
+                    <span class="tit">Information:</span>
+                    <p class="des">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.on:</p>
+                    <button class="button">Contact us</button>
+                </div>
+            </div>
+        </div>
 
         <div id="modal-popup-ok" class="mfp-hide zoom-anim-dialog popup result">
             <p class="heading">Ваша заявка принята =)</p>

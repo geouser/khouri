@@ -2,6 +2,7 @@
     padding: 190px 0 0;
     height: 100%;
     min-height: 600px;
+    position: relative;
     background-image: url("../images/offer_bg.jpg");
     background-position: 50% 50%;
     -webkit-background-size: cover;
@@ -60,4 +61,50 @@
   &:focus {
       background: #222326;
   }
+}
+
+.slick-dots {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid $yellow;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    &.slick-active {
+        background-color: #FFF;
+        border: 1px solid #fff;
+    }
+    &:before {
+        display: none;
+    }
+    button {
+      display: none;
+    }
+  }
+}
+
+.scroll-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: auto;
+    width: 26px;
+    text-align: center;
+    color: #a9acb0;
+    cursor: pointer;
+    img {
+        width: 100%;
+        display: block;
+        margin-bottom: 6px;
+    }
+    i {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-left: 2px;
+    }
 }

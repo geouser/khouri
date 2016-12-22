@@ -18,6 +18,28 @@
         @include flex();
         padding-top: 25px;
     }
+    &.prepare {
+        .mainNav {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            background-color: rgba(23,24,26, .8);
+            padding: 10px 0;
+        }
+    }
+    &.hasScrolled {
+        .mainNav {
+            top: 0;
+            opacity: 1;
+            @include transition(all, .4s);
+            ul {
+                width: 1200px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
         /*.................media.............*/
         @include m800 {
         }

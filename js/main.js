@@ -12,16 +12,21 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $(function() { 
         var $document = $(document),
-            $element = $('.menu-button'),
-            $element2 = $('header'),
+            $element = $('header'),
             className = 'hasScrolled';
 
         $document.scroll(function() {
-            $element.toggleClass(className, $document.scrollTop() >= 1);
-            $element2.toggleClass(className, $document.scrollTop() >= 1);
+            $element.toggleClass(className, $document.scrollTop() >= 300);
+            $element.toggleClass('prepare', $document.scrollTop() >= 200);
         });
     });
       
+    $('.mainNav a, .anchor').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 50
+        }, 800);
+        return false;
+    });
 
     /*---------------------------
                                   MENU TOGGLE
@@ -31,9 +36,9 @@ jQuery(document).ready(function($) {
         $(this).toggleClass('active');
         $(this).siblings('header').toggleClass('active');
         if ($('header').hasClass('active')) {
-                $('body, html').css('overflow', 'hidden');
+                $('body').css('overflow', 'hidden');
             } else {
-                $('body, html').css('overflow', 'visible');
+                $('body').css('overflow', 'visible');
             }
     });
 
@@ -109,6 +114,39 @@ jQuery(document).ready(function($) {
     $('.offer__slider').slick({
         fade: true,
         speed: 700
+    });
+
+    $('.team__slider').slick({
+        speed: 700,
+        arrows: true,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     });
 
     /*----------------------------

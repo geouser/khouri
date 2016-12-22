@@ -1,0 +1,66 @@
+.popup {
+    &--info {
+        background: rgba(23,24,26, .99);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
+        width: 1170px;
+        margin: 0 auto;
+        @include flex($alignI: stretch);
+    }
+    &__left {
+        width: 20%;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__right {
+        width: 80%;
+        padding: 45px 35px;
+        .aboutWorker {
+            padding: 20px 25px 25px;
+            text-align: left;
+            padding-bottom: 80px;
+            position: relative;
+            color: #FFF;
+            font: 24px $ptb;
+                .position {
+                    font: 20px $ptr;
+                    display: block;
+                    margin-top: 10px;
+                    border-bottom: 1px solid #222326;
+                    padding-bottom: 15px;
+                }            
+            .tit {
+                margin-top: 17px;
+                font: 16px/30px $ptr;
+                color: #F3F4F4;
+                display: inline-block;
+                vertical-align: top;
+                width: 14%;
+            }
+            .des {
+                margin-top: 17px;
+                display: inline-block;
+                vertical-align: top;
+                width: 85%;
+                font: 16px/30px $ptr;
+                color: #F3F4F4;
+            }
+            .button {
+                position: absolute;
+                bottom: 0px;
+                right: 25px;
+                margin: auto;
+                width: 220px;
+            }
+        }
+    }
+}
+
+
+.mfp-close-btn-in .mfp-close {
+    width: 65px;
+    height: 68px;
+    background-color: #222326;
+    color: $yellow;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}

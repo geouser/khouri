@@ -2,6 +2,75 @@
     float:left;
     position:relative;
     overflow:hidden;
+
+    &:before {
+        content: '\f002';
+        font: normal normal normal 14px/1 'FontAwesome';
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        color: $light;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(.8);
+        -ms-transform: translate(-50%, -50%) scale(.8);
+        -o-transform: translate(-50%, -50%) scale(.8);
+        transform: translate(-50%, -50%) scale(.8);
+        background-color: #000;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        z-index: 3;
+        border-radius: 50%;
+        opacity: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .2;
+        z-index: 2;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    
+    &:hover:after {
+        opacity: 0;
+    }
+    &:hover:before {
+        opacity: .8;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+        -o-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .label {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        max-width: -webkit-calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        background-color: rgba(0, 0, 0, .8);
+        padding: 3px 5px;
+        color: #fff;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        opacity: 1;
+    }
+
+    &:hover .label {
+        opacity: 0;
+    }
 }
 .am-wrapper img {
     position:absolute;

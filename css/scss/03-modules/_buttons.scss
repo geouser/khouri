@@ -1,0 +1,15 @@
+.button {
+    background-color: $yellow;
+    height: 45px;
+    font: 12px/45px $ptb;
+    text-transform: uppercase;
+    width: 165px;
+    color: $grey;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    &--big {
+        width: 220px;
+    }
+}
+

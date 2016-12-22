@@ -1,5 +1,5 @@
 .offer {
-    padding-top: 190px;
+    padding: 190px 0 0;
     height: 100%;
     min-height: 600px;
     background-image: url("../images/offer_bg.jpg");
@@ -9,7 +9,9 @@
             background-size: cover;
     @include flex($direction: column, $justify: center);
     .form {
-        margin-top: 80px;
+        width: calc(100% - 140px);
+        display: block;
+        margin: 80px auto 0;
     }
 }
 
@@ -22,4 +24,40 @@
         font: 34px $rl;
         margin-top: 10px;
     }
+}
+
+.offer__slider {
+    width: 100%;
+}
+
+.slick-arrow {
+  background-color: #222326;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  z-index: 10;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  &:before {
+        font-family: 'FontAwesome';
+        content: "\f104";
+  }
+  &.slick-next {
+      left: auto;
+      right: 20px;
+      &:before {
+            font-family: 'FontAwesome';
+            content: "\f105";
+        }
+  }
+  &:hover,
+  &:focus {
+      background: #222326;
+  }
 }

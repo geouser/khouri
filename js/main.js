@@ -80,6 +80,10 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.offer__slider').slick({
+        fade: true,
+        speed: 700
+    });
 
     /*----------------------------
                               SEND FORM

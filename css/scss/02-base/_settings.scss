@@ -1,0 +1,28 @@
+
+// TYPOGRAPHIC
+// ---------------------------
+html,
+body {
+	height: 100%;
+}
+
+body {
+    font-family: $ptr;
+    font-size: 16px;
+    color: $grey;
+}
+
+h2 {
+    font-family: $pfb;
+    font-size: 60px;
+}
+
+
+// lAYOUT
+// ---------------------------
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+    padding: 0 15px;
+}

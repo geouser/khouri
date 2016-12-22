@@ -16,6 +16,7 @@
         font-size: 14px;
         font-family: $ptr;
         color: $text;
+        @include transition(all, .2s);
         &:hover,
         &:focus {
             color: #fff;
@@ -50,13 +51,17 @@
 
 input:hover::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     opacity:  1;
+    @include transition(all, .2s);
 }
 input:hover:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    opacity:  1;
+   @include transition(all, .2s);
 }
 input:hover::-moz-placeholder { /* Mozilla Firefox 19+ */
    opacity:  1;
+   @include transition(all, .2s);
 }
 input:hover:-ms-input-placeholder { /* Internet Explorer 10-11 */
    opacity:  1;
+   @include transition(all, .2s);
 }

@@ -95,6 +95,7 @@
     width: 26px;
     text-align: center;
     color: #a9acb0;
+    @include transition(all, .2s);
     cursor: pointer;
     img {
         width: 100%;
@@ -106,5 +107,8 @@
         margin: 0 auto;
         text-align: center;
         margin-left: 2px;
+    }
+    &:hover {
+        opacity: .6;
     }
 }

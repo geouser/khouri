@@ -1,0 +1,30 @@
+.map {
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        position: absolute;
+        z-index: 2;
+        top: 100px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: $light;
+    }
+}
+
+
+.map-canvas {
+    height: 860px;
+    position: relative;
+    z-index: 1;
+}
+
+.gm-style a {
+    display: none!important;
+}
+.gmnoprint {
+    display: none;
+}

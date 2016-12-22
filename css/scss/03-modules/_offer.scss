@@ -9,10 +9,23 @@
          -o-background-size: cover;
             background-size: cover;
     @include flex($direction: column, $justify: center);
+    @media (max-width: 730px) {
+        padding: 140px 0 40px;
+        height: auto;
+        min-height: 0;
+    }
     .form {
+        width: -webkit-calc(100% - 140px);
         width: calc(100% - 140px);
         display: block;
         margin: 80px auto 0;
+        @media (max-width: 1100px) {
+            margin-top: 40px;
+            width: calc(100% - 110px);
+        }
+        @media (max-width: 500px) {
+            width: 85%;
+        }
     }
 }
 
@@ -24,6 +37,33 @@
         text-align: center;
         font: 34px $rl;
         margin-top: 10px;
+    }
+    @media (max-width: 1100px) {
+        font-size: 80px;
+        span {
+            font-size: 28px;
+        }
+    }
+    @media (max-width: 900px) {
+        font-size: 64px;
+        span {
+            font-size: 22px;
+        }
+    }
+    @media (max-width: 600px) {
+        font-size: 52px;
+        span {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 440px) {
+        font-size: 42px;
+        span {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 350px) {
+        font-size: 38px;
     }
 }
 
@@ -49,12 +89,28 @@
         font-family: 'FontAwesome';
         content: "\f104";
   }
+  @media (max-width: 1100px) {
+        left: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    @media (max-width: 500px) {
+        left: 5px;
+        width: 30px;
+        height: 30px;
+    }
   &.slick-next {
       left: auto;
       right: 20px;
       &:before {
             font-family: 'FontAwesome';
             content: "\f105";
+        }
+        @media (max-width: 1100px) {
+            right: 10px;
+        }
+        @media (max-width: 500px) {
+            right: 5px;
         }
   }
   &:hover,

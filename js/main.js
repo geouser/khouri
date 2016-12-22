@@ -145,7 +145,7 @@ jQuery(document).ready(function($) {
         slidesToScroll: 1,
         responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 1100,
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
@@ -154,7 +154,7 @@ jQuery(document).ready(function($) {
               }
             },
             {
-              breakpoint: 600,
+              breakpoint: 800,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2

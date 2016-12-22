@@ -48,17 +48,39 @@
 
 .tel,
 .mail {
-    color: $text;
+    color: #fff;
+    opacity: .6;
     font-size: 14px;line-height: 50px;
     display: inline-block;
     vertical-align: middle;
+    &:hover {
+        opacity: 1;
+    }
 }
 .tel {
     margin-right: 25px;
+    &:before {
+        content: "\f095";
+        font-family: 'FontAwesome';
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+        color: #FFF;
+        margin-top: -2px;
+    }
 }
 .mail {
     padding-left: 25px;
     border-left: 1px solid rgba(255,255,255,.1);
+    &:before {
+        content: "\f003";
+        font-family: 'FontAwesome';
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+        color: #FFF;
+        margin-top: -2px;
+    }
 }
 
 .logo {

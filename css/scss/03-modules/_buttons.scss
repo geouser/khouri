@@ -8,8 +8,15 @@
     display: inline-block;
     border: none;
     cursor: pointer;
+    @include transition(all, .2s);
     &--big {
         width: 220px;
+    }
+    &:hover  {
+        background-color: #E7CC00;
+        letter-spacing: 1px;
+        font-size: 13px;
+        line-height: 43px;
     }
 }
 

@@ -60,6 +60,9 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.offer__slider').slick({
+        
+    });
 
     /*----------------------------
                               SEND FORM

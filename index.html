@@ -48,12 +48,12 @@
                     </a>
                     <nav class="mainNav"><!-- start navigation -->
                         <ul>
-                            <li><a href="#" class="active">Home</a></li>
-                            <li><a href="#">About company</a></li>
-                            <li><a href="#">Our team</a></li>
-                            <li><a href="#">Our expertise</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#about">About company</a></li>
+                            <li><a href="#team">Our team</a></li>
+                            <li><a href="#expertise">Our expertise</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact us</a></li>
                         </ul>
                     </nav><!-- end nav -->
                 </div>
@@ -70,7 +70,7 @@
 
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
-        <section class="offer">
+        <section class="offer" id="home">
             <div class="offer__slider"><!-- start offer__slider -->
                 <div>
                     <div class="wrapper">
@@ -92,12 +92,16 @@
                     </div>
                 </div>
             </div><!-- end offer__slider -->
+            <div class="scroll-down anchor" href="#about">
+                <img src="images/mouse.svg" alt="">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
         </section><!-- end offer section --> 
 
 
         <!--=================================================================================================-->
                                                     <!-- About SECTION -->
-        <section class="about section">
+        <section class="about section" id="about">
             <div class="wrapper">
                 <h2>About company</h2>
                 <div class="infoBlock">
@@ -130,7 +134,7 @@
 
         <!--=================================================================================================-->
                                                     <!-- Team SECTION -->
-        <section class="team section">
+        <section class="team section" id="team">
 
                 <h2 class="white">Our team</h2>
                 <div class="team__slider">
@@ -208,7 +212,7 @@
         
 
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <div class="wrapper">
                 <h2>Gallery</h2>
             </div>
@@ -253,7 +257,7 @@
 
         
         <!-- start map -->
-        <section class="map">
+        <section class="map" id="contact">
             <div class="map-canvas" id="map_canvas" data-lat="25.241309" data-lng="55.272260"></div>
             <h2>Contacts us</h2>
 

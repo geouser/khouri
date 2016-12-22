@@ -2,6 +2,7 @@
     padding: 190px 0 0;
     height: 100%;
     min-height: 600px;
+    position: relative;
     background-image: url("../images/offer_bg.jpg");
     background-position: 50% 50%;
     -webkit-background-size: cover;
@@ -83,4 +84,27 @@
       display: none;
     }
   }
+}
+
+.scroll-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: auto;
+    width: 26px;
+    text-align: center;
+    color: #a9acb0;
+    cursor: pointer;
+    img {
+        width: 100%;
+        display: block;
+        margin-bottom: 6px;
+    }
+    i {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-left: 2px;
+    }
 }

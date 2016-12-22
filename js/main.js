@@ -12,16 +12,21 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $(function() { 
         var $document = $(document),
-            $element = $('.menu-button'),
-            $element2 = $('header'),
+            $element = $('header'),
             className = 'hasScrolled';
 
         $document.scroll(function() {
-            $element.toggleClass(className, $document.scrollTop() >= 1);
-            $element2.toggleClass(className, $document.scrollTop() >= 1);
+            $element.toggleClass(className, $document.scrollTop() >= 300);
+            $element.toggleClass('prepare', $document.scrollTop() >= 200);
         });
     });
       
+    $('.mainNav a, .anchor').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 50
+        }, 800);
+        return false;
+    });
 
     /*---------------------------
                                   MENU TOGGLE
@@ -31,9 +36,9 @@ jQuery(document).ready(function($) {
         $(this).toggleClass('active');
         $(this).siblings('header').toggleClass('active');
         if ($('header').hasClass('active')) {
-                $('body, html').css('overflow', 'hidden');
+                $('body').css('overflow', 'hidden');
             } else {
-                $('body, html').css('overflow', 'visible');
+                $('body').css('overflow', 'visible');
             }
     });
 

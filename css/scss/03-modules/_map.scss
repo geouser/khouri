@@ -94,6 +94,10 @@
             color: #a4a6aa;
             cursor: pointer;
 
+            &:hover {
+                color: $yellow;
+            }
+
             @media (max-width: 1200px) {
                 display: none;
             }

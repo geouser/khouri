@@ -66,6 +66,14 @@
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         opacity: 1;
+
+        @media (max-width: 991px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 10px;
+        }
     }
 
     &:hover .label {

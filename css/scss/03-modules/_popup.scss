@@ -1,4 +1,6 @@
 .popup {
+
+    &--expertise,
     &--info {
         background: rgba(23,24,26, .99);
         box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.4);
@@ -6,12 +8,16 @@
         margin: 0 auto;
         @include flex($alignI: stretch);
     }
+
+    .column-category,
     &__left {
         width: 20%;
         img {
             max-width: 100%;
         }
     }
+
+    .column-content,
     &__right {
         width: 80%;
         padding: 45px 35px;
@@ -58,9 +64,87 @@
 
 
 .mfp-close-btn-in .mfp-close {
-    width: 65px;
-    height: 68px;
+    width: 70px;
+    height: 70px;
     background-color: #222326;
     color: $yellow;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.column-category {
+    position: relative;
+    z-index: 1;
+    @include flex($direction: column, $justify: center, $alignI: center);
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #2d2f33;
+        opacity: .98;
+        z-index: -1;
+    }
+
+    .icon {
+        color: $yellow;
+        height: 75px;
+        text-align: center;
+        font-size: 75px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: $ptb;
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+}
+
+
+.column-content {
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+    padding-right: 70px;
+
+    .title {
+        font-size: 24px;
+        font-family: $ptb;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .form--simple {
+        background-color: transparent;
+        padding: 25px 0 0;
+
+        .form__group:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        .form__group.align-bottom {
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+        }
+    }
+
+    .text-field {
+        width: 75%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        line-height: 25px;
+        color: #17181a;
+        box-shadow: inset -1.414px -1.414px 10px 0px rgba(0, 0, 0, 0.2);
+    }
 }

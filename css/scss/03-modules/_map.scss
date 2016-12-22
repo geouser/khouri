@@ -12,6 +12,10 @@
         -o-transform: translateX(-50%);
         transform: translateX(-50%);
         color: $light;
+
+        @media (max-width: 1200px) {
+            top: 55px;
+        }
     }
 
 
@@ -28,7 +32,21 @@
         background-color: rgba(45, 47, 51, .9);
         color: #fff;
         z-index: 3;
-        @include flex($alignI: flex-start);
+        @include flex($alignI: flex-start, $justify: flex-start);
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            -webkit-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+            transform: translate(0);
+            left: 0;
+            background-color: rgb(45, 47, 51);
+        }
+
+        @media (max-width: 991px) {
+            position: static;
+        }
 
         .address,
         .email {
@@ -37,6 +55,27 @@
 
         .phone {
             width: 20%;
+        }
+
+        @media (max-width: 991px) {
+            .address,
+            .email,
+            .phone {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+
+            .email {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .address,
+            .email,
+            .phone {
+                width: 100%;
+            }
         }
 
         .expand {
@@ -55,6 +94,10 @@
             color: #a4a6aa;
             cursor: pointer;
 
+            @media (max-width: 1200px) {
+                display: none;
+            }
+
             .fa {
                 -webkit-transform: rotate(-45deg);
                 -ms-transform: rotate(-45deg);
@@ -70,6 +113,18 @@
                 font-size: 18px;
                 font-family: $ptb;
                 line-height: 30px;
+
+                @media (max-width: 991px) {
+                    font-size: 16px;
+                    font-family: $ptr;
+                    line-height: normal;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 18px;
+                    font-family: $ptb;
+                    line-height: 30px;
+                }
             }
 
             span {
@@ -93,6 +148,14 @@
     height: 860px;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 1200px) {
+        height: 600px;
+    }
+
+    @media (max-width: 767px) {
+        height: 500px;
+    }
 }
 
 .gm-style a {

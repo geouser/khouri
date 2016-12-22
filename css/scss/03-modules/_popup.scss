@@ -21,9 +21,9 @@
             padding-bottom: 80px;
             position: relative;
             color: #FFF;
-            font: 18px $ptb;
+            font: 24px $ptb;
                 .position {
-                    font: 16px $ptr;
+                    font: 20px $ptr;
                     display: block;
                     margin-top: 10px;
                     border-bottom: 1px solid #222326;
@@ -31,7 +31,7 @@
                 }            
             .tit {
                 margin-top: 17px;
-                font: 13px/30px $ptr;
+                font: 16px/30px $ptr;
                 color: #F3F4F4;
                 display: inline-block;
                 vertical-align: top;
@@ -42,16 +42,25 @@
                 display: inline-block;
                 vertical-align: top;
                 width: 85%;
-                font: 13px/30px $ptr;
+                font: 16px/30px $ptr;
                 color: #F3F4F4;
             }
             .button {
                 position: absolute;
-                bottom: 25px;
+                bottom: 0px;
                 right: 25px;
                 margin: auto;
                 width: 220px;
             }
         }
     }
+}
+
+
+.mfp-close-btn-in .mfp-close {
+    width: 65px;
+    height: 68px;
+    background-color: #222326;
+    color: $yellow;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
 }

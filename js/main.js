@@ -38,6 +38,26 @@ jQuery(document).ready(function($) {
     });
 
 
+    function montage() {
+        $('.am-container').montage({
+            fillLastRow : true,
+            liquid: false, 
+            alternateHeight : true,
+            minh: 80,
+            alternateHeightRange : {
+                min : $(window).width()/5,
+                max : $(window).width()/3
+            },
+            margin : 0
+        });    
+    }
+    montage();
+
+    $(window).on('resize', function(event) {
+        event.preventDefault();
+        montage();
+    });
+
 
     /*---------------------------
                                   Magnific popup

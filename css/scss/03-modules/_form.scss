@@ -16,7 +16,8 @@
         font-size: 14px;
         font-family: $ptr;
         color: $text;
-        &:hover {
+        &:hover,
+        &:focus {
             color: #fff;
             border-bottom: 1px solid $yellow;
         }
@@ -24,6 +25,27 @@
     button {
         margin-top: 38px;
     }
+
+    &--white {
+        background-color: #fff;
+
+        input {
+            border-bottom-color: #C5C5C6;
+
+            &:hover,
+            &:focus {
+                color: #17181A;
+                border-bottom-color: #17181A;
+            }
+        }
+
+        button {
+            background-color: #17181A;
+            color: #fff;
+        }
+    }
+
+
 }
 
 input:hover::-webkit-input-placeholder { /* WebKit, Blink, Edge */

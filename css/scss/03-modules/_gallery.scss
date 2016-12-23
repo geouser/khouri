@@ -1,5 +1,4 @@
 .am-wrapper {
-    float:left;
     position:relative;
     overflow:hidden;
 
@@ -85,7 +84,7 @@
     outline:none;
 }
 .am-container {
-    @extend %clearfix;
+    @include flex();
     width: 100%;
 }
 

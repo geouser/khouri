@@ -7,6 +7,10 @@
         width: 1170px;
         margin: 0 auto;
         @include flex($alignI: stretch);
+
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
     }
 
     .column-category,
@@ -15,12 +19,45 @@
         img {
             max-width: 100%;
         }
+
+        @media (max-width: 991px) {
+            width: 25%;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 45px 35px 0;
+
+            img {
+                display: block;
+                width: 260px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            padding: 20px;
+        }
     }
 
     .column-content,
     &__right {
         width: 80%;
         padding: 45px 35px;
+
+        @media (max-width: 991px) {
+            width: 75%;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+
+        @media (max-width: 500px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+
         .aboutWorker {
             padding: 20px 25px 25px;
             text-align: left;
@@ -28,6 +65,12 @@
             position: relative;
             color: #FFF;
             font: 24px $ptb;
+
+            @media (max-width: 991px) {
+                padding: 0 0 80px;
+            }
+
+
                 .position {
                     font: 20px $ptr;
                     display: block;
@@ -42,6 +85,11 @@
                 display: inline-block;
                 vertical-align: top;
                 width: 14%;
+
+                @media (max-width: 991px) {
+                    width: 100%;
+                    font-family: $ptb;
+                }
             }
             .des {
                 margin-top: 17px;
@@ -50,6 +98,11 @@
                 width: 85%;
                 font: 16px/30px $ptr;
                 color: #F3F4F4;
+
+                @media (max-width: 991px) {
+                    width: 100%;
+                    margin-top: 0;
+                }
             }
             .button {
                 position: absolute;
@@ -78,6 +131,13 @@
     position: relative;
     z-index: 1;
     @include flex($direction: column, $justify: center, $alignI: center);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 767px) {
+        padding-bottom: 30px!important;
+    }
 
     &:after {
         content: '';
@@ -146,5 +206,13 @@
         line-height: 25px;
         color: #17181a;
         box-shadow: inset -1.414px -1.414px 10px 0px rgba(0, 0, 0, 0.2);
+
+        @media (max-width: 1030px) {
+            width: 72%;
+        }
+
+        @media (max-width: 991px) {
+            width: 100%;
+        }
     }
 }

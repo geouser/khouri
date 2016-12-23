@@ -235,13 +235,7 @@
         display: inline-block;
         vertical-align: middle;
         margin: 0 0 0 38px;
-        width: 13px;
-        height: 14px;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        -webkit-background-size: 100%;
-             -o-background-size: 100%;
-                background-size: 100%;
+        color: #fff;
         opacity: .6;
         @include transition(all, .2s);
         &:first-of-type {
